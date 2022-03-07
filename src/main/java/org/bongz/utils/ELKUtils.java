@@ -10,6 +10,13 @@ import org.testng.Assert;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
+/**
+ * 
+ *Mar 7, 2022
+ * @author Bongani Maseko
+ *@version 1.0
+ *@since 1.0
+ */
 public class ELKUtils {
 
 	private ELKUtils() {}

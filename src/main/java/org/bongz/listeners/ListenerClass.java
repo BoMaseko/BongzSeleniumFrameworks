@@ -30,7 +30,17 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
-
+/**
+ * Implements {@link org.testng.ITestListener} and {@link org.testng.ISuiteListener} to leverage the abstract methods
+ * Mostly used to help in extent report generation
+ * 
+ * <pre>Please make sure to add the listener details in the testng.xml file</pre>
+ * 
+ *Mar 7, 2022
+ * @author Bongani Maseko
+ *@version 1.0
+ *@since 1.0
+ */
 
 public class ListenerClass implements ITestListener, ISuiteListener{
 
@@ -39,6 +49,10 @@ public class ListenerClass implements ITestListener, ISuiteListener{
     static int count_failedTCs;
     static int count_totalTCs;
 	
+    /**
+     * Initialise the reports with the file name
+	 * @see org.bongz.reports.ExtentReport
+     */
 	@Override
 	public void onStart(ISuite suite) {
 		try {
@@ -47,6 +61,10 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 			e.printStackTrace();
 		}
 	}
+	/**
+	 * Terminate the reports
+	 * @see org.bongz.reports.ExtentReport
+	 */
 
 	@Override
 	public void onFinish(ISuite suite) {
@@ -61,6 +79,11 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 		}
 	}
 
+	/**
+	 * Starts a test node for each testng test
+	 * @see org.bongz.reports.ExtentReport
+	 * @see org.bongz.annotations.FrameworkAnnotation
+	 */
 	@Override
 	public void onTestStart(ITestResult result) {
 		 count_totalTCs = count_totalTCs + 1;
@@ -79,6 +102,10 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 		}
 	}
 
+	/**
+	 * Marks the test as pass and logs it in the report
+	 * @see org.bongz.reports.ExtentLogger
+	 */
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		count_passedTCs = count_passedTCs + 1;
@@ -94,6 +121,11 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 		}
 	}
 
+	/**
+	 *  Marks the test as fail,append base64 screenshot and logs it in the report
+	 * @see org.bongz.reports.ExtentLogger
+	 * @see org.bongz.utils.ScreenshotUtils
+	 */
 	@Override
 	public void onTestFailure(ITestResult result) {
 		count_failedTCs = count_failedTCs + 1;
@@ -118,6 +150,10 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 		
 	}
 
+	/**
+	 * Marks the test as skip and logs it in the report
+	 * @see org.bongz.reports.ExtentLogger
+	 */
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		count_skippedTCs = count_skippedTCs + 1;

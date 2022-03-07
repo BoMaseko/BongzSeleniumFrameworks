@@ -7,14 +7,31 @@ import org.bongz.utils.ScreenshotUtils;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.markuputils.Markup;
 
-
+/**
+ *  Used for logging the events in the extent report.
+ * <p>
+ * Encapsulates the unnecessary methods from users<p>
+ * 
+ *Mar 7, 2022
+ * @author Bongani Maseko
+ *@version 1.0
+ *@since 1.0
+ */
 
 
 
 public final class ExtentLogger {
 
+	/**
+	 * Private constructor to avoid external instantiation
+	 */
 	private ExtentLogger(){}
 
+	/**
+	 * Logs pass event in the extent report
+	 * @author Bongz
+	 * @param message custom message that needs to be logged
+	 */
 	public static void pass(String message) {
 		ExtentManager.getExtentTest().pass(message);
 	}
@@ -23,6 +40,11 @@ public final class ExtentLogger {
 	        ExtentManager.getExtentTest().pass(message);
 	    }
 
+	  /**
+	   * ogs fail event in the extent report
+	 * @author Bongz
+	 * @param message custom message that needs to be logged
+	   */
 	public static void fail(String message) {
 		ExtentManager.getExtentTest().fail(message);
 	}
@@ -31,6 +53,12 @@ public final class ExtentLogger {
 	        ExtentManager.getExtentTest().fail(message);
 	    }
 
+	  /**
+	   * 
+	   *Logs skip event in the extent report
+	 * @author Bongz
+	 * @param message custom message that needs to be logged
+	   */
 	public static void skip(String message) {
 		ExtentManager.getExtentTest().skip(message);
 	}
@@ -39,6 +67,12 @@ public final class ExtentLogger {
         ExtentManager.getExtentTest().skip(message);
     }
 
+    /**
+     * 
+     * Logs info event in the extent report
+	 * @author Bongz
+	 * @param message custom info that needs to be logged
+     */
 	public static void info(Markup message) {
 		ExtentManager.getExtentTest().info(message);
 	}
@@ -47,7 +81,14 @@ public final class ExtentLogger {
 		ExtentManager.getExtentTest().info(message);
 	}
 
-
+	/**
+	 * Logs pass event in the extent report based on user input in property file
+	 * 
+	 * @author Bongz
+	 * @param message custom message that needs to be logged
+	 * @param isScreenshotNeeded appends screenshot when true ,ignore otherwise
+	 */
+	
 	public static void pass(String message, boolean isScreenShotNeeded) throws Exception {
 		if(PropertyUtils.getPropertyValue(ConfigProperties.PASSEDSTEPSCREENSHOT).equalsIgnoreCase("yes") 
 				&& isScreenShotNeeded) {
@@ -59,6 +100,13 @@ public final class ExtentLogger {
 		}
 	}
 
+	/**
+	 * Logs fail event in the extent report based on user input in property file
+	 * 
+	 * @author Bongz
+	 * @param message custom message that needs to be logged
+	 * @param isScreenshotNeeded appends screenshot when true ,ignore otherwise
+	 */
 	public static void fail(String message, boolean isScreenShotNeeded) throws Exception {
 		if(PropertyUtils.getPropertyValue(ConfigProperties.FAILEDSTEPSCREENSHOT).equalsIgnoreCase("yes") 
 				&& isScreenShotNeeded) {
@@ -68,6 +116,16 @@ public final class ExtentLogger {
 		}
 	}
 
+	/**
+	 * Logs skip event in the extent report based on user input in property file
+	 * 
+	 * @author Bongz
+	 * @param message custom message that needs to be logged
+	 * @param isScreenshotNeeded appends screenshot when true ,ignore otherwise
+	 * @param message
+	 * @param isScreenShotNeeded
+	 * @throws Exception
+	 */
 	public static void skip(String message, boolean isScreenShotNeeded) throws Exception {
 		if(PropertyUtils.getPropertyValue(ConfigProperties.SKIPPEDSTEPSCREENSHOT).equalsIgnoreCase("yes") 
 				&& isScreenShotNeeded) {

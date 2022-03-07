@@ -3,8 +3,20 @@ package org.bongz.constants;
 import org.bongz.enums.ConfigProperties;
 import org.bongz.utils.PropertyUtils;
 
+
+/**Framework Constants holds all the constant values used within the framework. If some value needs to be changed
+ * or modified often, then it should be stored in the property files
+ * 
+ *Mar 7, 2022
+ * @author Bongani Maseko
+ *@version 1.0
+ *@since 1.0
+ */
 public final class FrameworkConstants {
 	
+	/**
+	 * Private constructor to avoid external instantiation
+	 */
 	private FrameworkConstants() {}
 
 	private static final int WAITSTRATEGY = 10;
@@ -50,6 +62,12 @@ public final class FrameworkConstants {
 
 	private static String extentReportFilePath = "";
 	
+	
+	/**
+	 * @author Bongz
+	 * @return Extent Report path where the index.html file will be generated.
+	 * @throws Exception
+	 */
 	public static String getExtentReportFilePath() throws Exception {
 		if(extentReportFilePath.isEmpty()) {
 			extentReportFilePath = createReportPath();
@@ -57,6 +75,12 @@ public final class FrameworkConstants {
 		return extentReportFilePath;
 	}
 	
+	/**
+	 * 
+	 *@author Bongz
+	 * @return If Override reports value in the 
+	 * property file is no,then the timestamp will be appended
+	 */
 	private static String createReportPath() throws Exception {
 		if(PropertyUtils.getPropertyValue(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")) {
 			return EXTENTREPORTFOLDERPATH+System.currentTimeMillis()+"/index.html";

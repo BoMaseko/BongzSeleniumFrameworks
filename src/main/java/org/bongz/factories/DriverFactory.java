@@ -14,6 +14,14 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
+/**
+ * 
+ *Mar 7, 2022
+ * @author Bongani Maseko
+ *@version 1.0
+ *@since 1.0
+ */
 public final class DriverFactory {
 	
 	private DriverFactory() {}

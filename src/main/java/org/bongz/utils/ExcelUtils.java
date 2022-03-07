@@ -13,10 +13,31 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.bongz.constants.FrameworkConstants;
 
+/**
+ * Utility class to read or write to excel. <p>
+ * 
+ *Mar 7, 2022
+ * @author Bongani Maseko
+ *@version 1.0
+ *@since 1.0
+ */
 public final class ExcelUtils {
 
+	/**
+	 * Private constructor to avoid external instantiation
+	 */
 	private ExcelUtils() {}
 	
+	
+	/**
+	 * Encapsulates all the value from the mentioned excel sheet and store it in
+	 * List holding HashMaps. Key for the map in the column header in the excel sheet.
+	 * 
+	 * @author Bongz
+	 * @param sheetname Excel sheetname to read the value from
+	 * @return List where each index holds a map and Each map holds the details about the test
+	 * TODO create reusable methods
+	 */
 	public static List<Map<String, String>> getTestDetails(String sheetname) {
 		
 		
