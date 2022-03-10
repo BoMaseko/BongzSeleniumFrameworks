@@ -1,0 +1,35 @@
+{
+  "networkConnectionEnabled": false,
+  "msedge": {
+    "msedgedriverVersion": "98.0.1108.56 (9a336a18eae89157b3c7ea0568a9cbced8ebc3f7)",
+    "userDataDir": "\u002ftmp\u002f.com.microsoft.Edge.fS4RYI"
+  },
+  "se:cdpVersion": "98.0.1108.56",
+  "timeouts": {
+    "implicit": 0,
+    "pageLoad": 300000,
+    "script": 30000
+  },
+  "pageLoadStrategy": "normal",
+  "unhandledPromptBehavior": "dismiss and notify",
+  "strictFileInteractability": false,
+  "se:forwardCdp": "ws:\u002f\u002f172.27.0.7:4444\u002fsession\u002fff26978e3b18d72aac9dca8e1ea43ef5\u002fse\u002ffwd",
+  "se:vnc": "ws:\u002f\u002f172.27.0.7:4444\u002fsession\u002fff26978e3b18d72aac9dca8e1ea43ef5\u002fse\u002fvnc",
+  "se:cdp": "ws:\u002f\u002f172.27.0.7:4444\u002fsession\u002fff26978e3b18d72aac9dca8e1ea43ef5\u002fse\u002fcdp",
+  "proxy": {
+  },
+  "se:vncLocalAddress": "ws:\u002f\u002f172.27.0.7:7900",
+  "webauthn:extension:credBlob": true,
+  "acceptInsecureCerts": false,
+  "browserVersion": "98.0.1108.56",
+  "se:recordVideo": "false",
+  "browserName": "msedge",
+  "platformName": "linux",
+  "ms:edgeOptions": {
+    "debuggerAddress": "localhost:34659"
+  },
+  "se:vncEnabled": true,
+  "setWindowRect": true,
+  "webauthn:extension:largeBlob": true,
+  "webauthn:virtualAuthenticators": true
+}

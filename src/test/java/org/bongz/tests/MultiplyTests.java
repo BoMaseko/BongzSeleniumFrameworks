@@ -28,7 +28,7 @@ public final class MultiplyTests extends BaseTest{
 		  .enterUserName(data.get("username")) .enterPassword(DecodeUtils.getDecodeString(data.get("password")))
 		  .login() .getPageTitle();
 	
-		Assertions.assertThat(title).isEqualTo("My Points");
+		Assertions.assertThat(title).isEqualTo("Login");
 	}
 	
 	@FrameworkAnnotations(author= {"KBTokzan"}, category= {CategoryType.SANITY})

@@ -1,76 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-05T17:34:51 SAST" name="Suite" finished-at="2022-03-05T17:44:05 SAST" duration-ms="554343">
+  <suite started-at="2022-03-10T13:37:16 SAST" name="Suite" finished-at="2022-03-10T13:42:57 SAST" duration-ms="341295">
     <groups>
     </groups>
-    <test started-at="2022-03-05T17:34:51 SAST" name="Test" finished-at="2022-03-05T17:44:05 SAST" duration-ms="554343">
+    <test started-at="2022-03-10T13:37:16 SAST" name="Test" finished-at="2022-03-10T13:42:57 SAST" duration-ms="341295">
       <class name="org.bongz.tests.MultiplyTests">
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:34:53 SAST" name="setUp" finished-at="2022-03-05T17:37:21 SAST" duration-ms="147594" status="PASS">
+        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-10T13:37:19 SAST" name="setUp" finished-at="2022-03-10T13:41:49 SAST" duration-ms="270502" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@4a29f290]]>
+                <![CDATA[[Ljava.lang.Object;@489543a6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:34:53 SAST" name="setUp" finished-at="2022-03-05T17:37:22 SAST" duration-ms="148639" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@4bee18dc]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="completeHealthQuestionnareTest(java.util.Map)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:37:22 SAST" name="completeHealthQuestionnareTest" description="To check if the user is ablee to complete the health questionaire" data-provider="getData" finished-at="2022-03-05T17:41:51 SAST" duration-ms="269552" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareTest, execute=yes, version=98.0, username=bomaseko1}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completeHealthQuestionnareTest -->
-        <test-method signature="completeHealthQuestionnareTest(java.util.Map)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:37:22 SAST" name="completeHealthQuestionnareTest" description="To check if the user is ablee to complete the health questionaire" data-provider="getData" finished-at="2022-03-05T17:41:43 SAST" duration-ms="260996" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTest, execute=yes, version=98.0, username=bomaseko1}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completeHealthQuestionnareTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:42:07 SAST" name="tearDown" finished-at="2022-03-05T17:42:43 SAST" duration-ms="35910" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:42:07 SAST" name="tearDown" finished-at="2022-03-05T17:42:43 SAST" duration-ms="35793" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp([Ljava.lang.Object;)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:42:43 SAST" name="setUp" finished-at="2022-03-05T17:43:41 SAST" duration-ms="58017" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@44f3fe83]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="loginlogoutTest(java.util.Map)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:43:41 SAST" name="loginlogoutTest" description="To check if the user can successfully login and logout" data-provider="getData" finished-at="2022-03-05T17:43:53 SAST" duration-ms="12408" status="FAIL">
+        <test-method signature="loginlogoutTest(java.util.Map)[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-10T13:41:49 SAST" name="loginlogoutTest" description="To check if the user can successfully login and logout" data-provider="getData" finished-at="2022-03-10T13:42:05 SAST" duration-ms="15888" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -78,23 +26,47 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[
-Expecting:
- <"Login">
-to be equal to:
- <"My Points">
-but was not.]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#username"}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NB5CG7481SKZ', ip: '10.13.97.232', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\bomaseko\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ca8b481aeb48ef1e4e5efc77dcddad7c
+*** Element info: {Using=id, value=username}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 
-Expecting:
- <"Login">
-to be equal to:
- <"My Points">
-but was not.
-at org.bongz.tests.MultiplyTests.loginlogoutTest(MultiplyTests.java:31)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username"}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NB5CG7481SKZ', ip: '10.13.97.232', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\bomaseko\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ca8b481aeb48ef1e4e5efc77dcddad7c
+*** Element info: {Using=id, value=username}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+at org.openqa.selenium.By$ById.findElement(By.java:188)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.bongz.factories.ExplicitWaitFactory.PerformExplicitWait(ExplicitWaitFactory.java:46)
+at org.bongz.pages.BasePage.sendKeys(BasePage.java:49)
+at org.bongz.pages.MultiplyLoginPage.enterUserName(MultiplyLoginPage.java:21)
+at org.bongz.tests.MultiplyTests.loginlogoutTest(MultiplyTests.java:28)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,11 +84,11 @@ at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at java.base/java.lang.Thread.run(Thread.java:831)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginlogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-05T17:43:57 SAST" name="tearDown" finished-at="2022-03-05T17:44:05 SAST" duration-ms="8701" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.bongz.tests.MultiplyTests@383bfa16]" started-at="2022-03-10T13:42:05 SAST" name="tearDown" finished-at="2022-03-10T13:42:57 SAST" duration-ms="51420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

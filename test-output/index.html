@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -108,25 +108,6 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.bongz.tests.MultiplyTests" class="method navigator-link" hash-for-method="completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareT...)">completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareT...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.bongz.tests.MultiplyTests" class="method navigator-link" hash-for-method="completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTes...)">completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTes...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -150,20 +131,36 @@
                   </a> <!-- loginlogoutTest({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ver...) -->
                   <span class="method-name">loginlogoutTest</span>
                   <span class="parameters">({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, version=98.0, username=bomaseko11})</span>
-                  <div class="stack-trace">java.lang.AssertionError: 
-Expecting:
- &lt;&quot;Login&quot;&gt;
-to be equal to:
- &lt;&quot;My Points&quot;&gt;
-but was not.
-	at org.bongz.tests.MultiplyTests.loginlogoutTest(MultiplyTests.java:31)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username&quot;}
+  (Session info: chrome=98.0.4758.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;NB5CG7481SKZ&apos;, ip: &apos;10.13.97.232&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\bomaseko\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ca8b481aeb48ef1e4e5efc77dcddad7c
+*** Element info: {Using=id, value=username}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.bongz.factories.ExplicitWaitFactory.PerformExplicitWait(ExplicitWaitFactory.java:46)
+	at org.bongz.pages.BasePage.sendKeys(BasePage.java:49)
+	at org.bongz.pages.MultiplyLoginPage.enterUserName(MultiplyLoginPage.java:21)
+	at org.bongz.tests.MultiplyTests.loginlogoutTest(MultiplyTests.java:28)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 9 stack frames
+... Removed 14 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (To check if the user can successfully login and logout)                  </em>
@@ -171,34 +168,6 @@ but was not.
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">org.bongz.tests.MultiplyTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareT...)">
-                  </a> <!-- completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareT...) -->
-                  <span class="method-name">completeHealthQuestionnareTest</span>
-                  <span class="parameters">({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareTest, execute=yes, version=98.0, username=bomaseko1})</span>
-                  <em>
-(To check if the user is ablee to complete the health questionaire)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTes...)">
-                  </a> <!-- completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTes...) -->
-                  <span class="method-name">completeHealthQuestionnareTest</span>
-                  <span class="parameters">({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTest, execute=yes, version=98.0, username=bomaseko1})</span>
-                  <em>
-(To check if the user is ablee to complete the health questionaire)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -256,24 +225,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'completeHealthQuestionnareTest')
+data.setCell(0, 1, 'loginlogoutTest')
 data.setCell(0, 2, 'org.bongz.tests.MultiplyTests')
-data.setCell(0, 3, 269552);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'completeHealthQuestionnareTest')
-data.setCell(1, 2, 'org.bongz.tests.MultiplyTests')
-data.setCell(1, 3, 260996);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginlogoutTest')
-data.setCell(2, 2, 'org.bongz.tests.MultiplyTests')
-data.setCell(2, 3, 12408);
+data.setCell(0, 3, 15888);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -301,42 +262,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">org.bongz.tests.MultiplyTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp([{password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnare...)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp([{password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTe...)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareT...)</span>
-                <span class="method-start">148131 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">completeHealthQuestionnareTest({password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=edge, testname=completeHealthQuestionnareTes...)</span>
-                <span class="method-start">148639 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">433361 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">433493 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
                 <span class="method-name">setUp([{password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ve...)</span>
-                <span class="method-start">469327 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">loginlogoutTest({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ver...)</span>
-                <span class="method-start">527351 ms</span>
+                <span class="method-start">270513 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">543143 ms</span>
+                <span class="method-start">286600 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
