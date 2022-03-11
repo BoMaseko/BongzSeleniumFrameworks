@@ -6,6 +6,7 @@ import org.bongz.enums.ConfigProperties;
 import org.bongz.utils.PropertyUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
@@ -29,6 +30,7 @@ public final class DriverFactory {
 	public static WebDriver getDriver(String browser, String version) throws Exception  {
 		
 		WebDriver driver = null;
+		
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			//System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromedriverpath());
@@ -61,8 +63,14 @@ public final class DriverFactory {
 			}
 			
 			else {
+				System.out.println("Test started via chrome locally" );
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless");
+				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--no-sandbox");
+				options.addArguments("window-size=1920, 1080");
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(options);
 			}
 		}else if (browser.equalsIgnoreCase("firefox")) {
 			//System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckodriverpath());
