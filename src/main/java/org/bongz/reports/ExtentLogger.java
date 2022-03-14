@@ -149,7 +149,7 @@ public final class ExtentLogger {
 	}
 	
 	public static void fail(Markup message, boolean isScreeshotNeeded) throws Exception {
-		if(PropertyUtils.getPropertyValue(ConfigProperties.PASSEDSTEPSCREENSHOT).equalsIgnoreCase("yes") 
+		if(PropertyUtils.getPropertyValue(ConfigProperties.FAILEDSTEPSCREENSHOT).equalsIgnoreCase("yes") 
 				&& isScreeshotNeeded) {
 			
 			 ExtentManager.getExtentTest().fail(MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
@@ -162,7 +162,7 @@ public final class ExtentLogger {
 	}
 	
 	public static void skip(Markup message, boolean isScreeshotNeeded) throws Exception {
-		if(PropertyUtils.getPropertyValue(ConfigProperties.PASSEDSTEPSCREENSHOT).equalsIgnoreCase("yes") 
+		if(PropertyUtils.getPropertyValue(ConfigProperties.SKIPPEDSTEPSCREENSHOT).equalsIgnoreCase("yes") 
 				&& isScreeshotNeeded) {
 			
 			 ExtentManager.getExtentTest().skip(MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());

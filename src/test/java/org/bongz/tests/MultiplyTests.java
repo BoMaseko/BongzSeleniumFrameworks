@@ -26,7 +26,7 @@ public final class MultiplyTests extends BaseTest{
 	
 		  String title = new MultiplyLoginPage() .clickLogin()
 		  .enterUserName(data.get("username")) .enterPassword(DecodeUtils.getDecodeString(data.get("password")))
-		  .login() .getPageTitle();
+		  .login().getPageTitle();
 	
 		Assertions.assertThat(title).isEqualTo("Login");
 	}

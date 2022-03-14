@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.bongz.tests.MultiplyTests" class="method navigator-link" hash-for-method="loginlogoutTest({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ver...)">loginlogoutTest({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ver...)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="org.bongz.tests.CoreAdminTests" class="method navigator-link" hash-for-method="campaignManagementTest({password=, menutxt=, browser=chrome, testname=campaignManagementTest, execute=yes, version=96, user...)">campaignManagementTest({password=, menutxt=, browser=chrome, testname=campaignManagementTest, execute=yes, version=96, user...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,55 +119,24 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">org.bongz.tests.MultiplyTests</span>
+              <img src="passed.png"/>
+              <span class="class-name">org.bongz.tests.CoreAdminTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginlogoutTest({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ver...)">
-                  </a> <!-- loginlogoutTest({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ver...) -->
-                  <span class="method-name">loginlogoutTest</span>
-                  <span class="parameters">({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, version=98.0, username=bomaseko11})</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username&quot;}
-  (Session info: chrome=98.0.4758.102)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NB5CG7481SKZ&apos;, ip: &apos;10.13.97.232&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\bomaseko\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ca8b481aeb48ef1e4e5efc77dcddad7c
-*** Element info: {Using=id, value=username}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.bongz.factories.ExplicitWaitFactory.PerformExplicitWait(ExplicitWaitFactory.java:46)
-	at org.bongz.pages.BasePage.sendKeys(BasePage.java:49)
-	at org.bongz.pages.MultiplyLoginPage.enterUserName(MultiplyLoginPage.java:21)
-	at org.bongz.tests.MultiplyTests.loginlogoutTest(MultiplyTests.java:28)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
+                  <a name="campaignManagementTest({password=, menutxt=, browser=chrome, testname=campaignManagementTest, execute=yes, version=96, user...)">
+                  </a> <!-- campaignManagementTest({password=, menutxt=, browser=chrome, testname=campaignManagementTest, execute=yes, version=96, user...) -->
+                  <span class="method-name">campaignManagementTest</span>
+                  <span class="parameters">({password=, menutxt=, browser=chrome, testname=campaignManagementTest, execute=yes, version=96, username=})</span>
                   <em>
-(To check if the user can successfully login and logout)                  </em>
+(To check if the user is able to create a campaign)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -185,7 +154,7 @@ Session ID: ca8b481aeb48ef1e4e5efc77dcddad7c
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.bongz.tests.MultiplyTests&quot;/&gt;
+      &lt;class name=&quot;org.bongz.tests.CoreAdminTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -227,14 +196,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginlogoutTest')
-data.setCell(0, 2, 'org.bongz.tests.MultiplyTests')
-data.setCell(0, 3, 15888);
+data.setCell(0, 1, 'campaignManagementTest')
+data.setCell(0, 2, 'org.bongz.tests.CoreAdminTests')
+data.setCell(0, 3, 5084);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -260,20 +229,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.bongz.tests.MultiplyTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">org.bongz.tests.CoreAdminTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp([{password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ve...)</span>
+                <span class="method-name">setUp([{password=, menutxt=, browser=chrome, testname=campaignManagementTest, execute=yes, version=96, use...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">loginlogoutTest({password=QEtCVG9remFuMjAyMQ==, menutxt=, browser=chrome, testname=loginlogoutTest, execute=yes, ver...)</span>
-                <span class="method-start">270513 ms</span>
+                <span class="method-name">campaignManagementTest({password=, menutxt=, browser=chrome, testname=campaignManagementTest, execute=yes, version=96, user...)</span>
+                <span class="method-start">106553 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">286600 ms</span>
+                <span class="method-start">111653 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,12 +1,16 @@
 package org.bongz.pages;
 
+import java.util.List;
+
 import org.bongz.driver.DriverManager;
 import org.bongz.enums.WaitStrategy;
 import org.bongz.factories.ExplicitWaitFactory;
 import org.bongz.reports.ExtentLogger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 
 
@@ -81,10 +85,42 @@ public class BasePage {
 		return DriverManager.getDriver().getTitle();
 	}
 	
+	public void select(By by, WaitStrategy wait, String elementname) {
+		element = ExplicitWaitFactory.PerformExplicitWait(wait, by);
+		try {
+			ExtentLogger.pass(elementname +  " is selected successfully ", true );
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+	public void selectDate(WaitStrategy wait, String elementname) {
+		
+		 List<WebElement> month =  DriverManager.getDriver().findElements(By.xpath("//table/tbody/tr/td"));
+		 
+		 for (int dayz = 0; dayz<month.size(); dayz++) {
+	         //check date
+	         String day = month.get(dayz).getText();
+	        // System.out.println(day);
+	         if (day.equals("25")) {
+	            month.get(dayz).click();
+	            break;
+	         }
+	      }
+		 try {
+			ExtentLogger.pass(  elementname+  " is selected successfully ", true );
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void scrollIntoView(By by, WaitStrategy wait) {
+		element = ExplicitWaitFactory.PerformExplicitWait(wait, by);
+		element = DriverManager.getDriver().findElement(by);
+		((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
 
-	
-	
-	
-	
+	}
 
 }
