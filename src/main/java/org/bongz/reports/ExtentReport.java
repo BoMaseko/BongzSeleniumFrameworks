@@ -77,7 +77,7 @@ public final class ExtentReport {
 			extent.flush();
 		}
 		ExtentManager.unload();
-		//Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
+		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
 	}
 
 	/**

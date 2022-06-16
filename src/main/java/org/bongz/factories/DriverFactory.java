@@ -70,7 +70,7 @@ public final class DriverFactory {
 				options.addArguments("--no-sandbox");
 				options.addArguments("window-size=1920, 1080");
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver(options);
+				driver = new ChromeDriver();
 			}
 		}else if (browser.equalsIgnoreCase("firefox")) {
 			//System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckodriverpath());

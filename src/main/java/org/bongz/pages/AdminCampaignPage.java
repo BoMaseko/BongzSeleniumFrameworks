@@ -1,11 +1,8 @@
 package org.bongz.pages;
 
-import java.util.List;
-
-import org.bongz.driver.DriverManager;
 import org.bongz.enums.WaitStrategy;
+import org.bongz.utils.FakerUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.github.javafaker.Faker;
@@ -31,7 +28,7 @@ public class AdminCampaignPage extends BasePage{
 		click(campaignManagement, WaitStrategy.CLICKABLE, "Campaign Management");
 		click(campaignSubMenu, WaitStrategy.CLICKABLE, "Campaign Sub Menu");
 		click(createButton, WaitStrategy.CLICKABLE, "Create Button");
-		sendKeys(campaignCodeTxt, faker.funnyName().name(), WaitStrategy.VISIBLE, "Campaign Code");
+		sendKeys(campaignCodeTxt, FakerUtils.getFirstName(), WaitStrategy.VISIBLE, "Campaign Code");
 		sendKeys(campaignNameTxt, faker.superhero().name(), WaitStrategy.VISIBLE, "Campaign Name");
 		sendKeys(campaignDescTxt, faker.superhero().descriptor(), WaitStrategy.VISIBLE, "Campaign Description");
 		select(qualifyProduct, WaitStrategy.CLICKABLE, "Qualify Product");

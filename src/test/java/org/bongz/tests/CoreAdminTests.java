@@ -18,7 +18,7 @@ public final class CoreAdminTests extends BaseTest{
 
 		String title = new AdminHomePage().createCampaignManagement().createCampaign().getPageTitle();
 
-		Assertions.assertThat(title).isEqualTo("Events UI");
+		Assertions.assertThat(title).isEqualTo("Events U");
 	}
 
 }

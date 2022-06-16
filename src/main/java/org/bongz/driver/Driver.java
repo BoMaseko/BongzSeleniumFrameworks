@@ -23,9 +23,9 @@ package org.bongz.driver;
 
 import java.util.Objects;
 
-import org.bongz.enums.ConfigProperties;
+import org.aeonbits.owner.ConfigFactory;
+import org.bongz.configs.FrameworkConfig;
 import org.bongz.factories.DriverFactory;
-import org.bongz.utils.PropertyUtils;
 
 
 /**
@@ -49,9 +49,7 @@ public final class Driver {
 	/**
 	 *  Private constructor to avoid external instantiation
 	 */
-	private Driver() {
-
-	}
+	private Driver() {}
 
 
 	/**
@@ -63,11 +61,15 @@ public final class Driver {
 	 */
 	public static void initDriver(String browser, String version) throws Exception {
 		
+		FrameworkConfig config = ConfigFactory.create(FrameworkConfig.class);
+		
 		if(Objects.isNull(DriverManager.getDriver())) {
 			
+			
 			DriverManager.setDriver(DriverFactory.getDriver(browser, version));
-			DriverManager.getDriver().get(PropertyUtils.getPropertyValue(ConfigProperties.URL));
+			//DriverManager.getDriver().get(PropertyUtils.getPropertyValue(ConfigProperties.URL));
 			//DriverManager.getDriver().get(JsonUtils.getPropertyValue(ConfigProperties.URL));
+			DriverManager.getDriver().get(config.url());
 			
 			DriverManager.getDriver().manage().deleteAllCookies();
 			DriverManager.getDriver().manage().window().maximize();

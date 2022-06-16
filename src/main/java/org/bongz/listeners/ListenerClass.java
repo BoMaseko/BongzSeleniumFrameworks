@@ -12,7 +12,9 @@ import static org.bongz.constants.FrameworkConstants.ICON_SMILEY_SKIP;
 import java.io.IOException;
 import java.util.Arrays;
 
+import org.aeonbits.owner.ConfigFactory;
 import org.bongz.annotations.FrameworkAnnotations;
+import org.bongz.configs.FrameworkConfig;
 import org.bongz.enums.ConfigProperties;
 import org.bongz.reports.ExtentLogger;
 import org.bongz.reports.ExtentReport;
@@ -87,6 +89,9 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 	@Override
 	public void onTestStart(ITestResult result) {
 		 count_totalTCs = count_totalTCs + 1;
+		 
+		 FrameworkConfig config = ConfigFactory.create(FrameworkConfig.class);
+		 
 		ExtentReport.createTest(result.getMethod().getDescription());
 		ExtentReport.addAuthors(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotations.class).author());
 		ExtentReport.addcategories(result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(FrameworkAnnotations.class).category());
@@ -96,7 +101,7 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 		
 		try {
 			ExtentLogger.info(ICON_Navigate_Right + "  Navigating to : " + BOLD_START +
-			        PropertyUtils.getPropertyValue(ConfigProperties.URL) + BOLD_END);
+			        config.url() + BOLD_END);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -157,7 +162,7 @@ public class ListenerClass implements ITestListener, ISuiteListener{
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		count_skippedTCs = count_skippedTCs + 1;
-		ExtentLogger.fail(ICON_BUG + " " + "<b><i>" + result.getThrowable().toString() + "</i></b>");
+		ExtentLogger.skip(ICON_BUG + " " + "<b><i>" + result.getThrowable().toString() + "</i></b>");
 		String logText = "<b>" + result.getMethod().getMethodName() + " is skipped.<b>" + " " + ICON_SMILEY_SKIP;
 		 Markup markupmessage = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		try {

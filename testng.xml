@@ -8,8 +8,8 @@
 </listeners>
   <test thread-count="1" name="Test" parallel="methods">
     <classes>
-      <class name="org.bongz.tests.CoreAdminTests"/>
-      
+      <class name="org.bongz.tests.MultiplyTests"/>
+       <class name="org.bongz.tests.CoreAdminTests"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
