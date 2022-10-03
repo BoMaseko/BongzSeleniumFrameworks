@@ -8,9 +8,7 @@ import org.testng.annotations.Test;
 
 public final class HomepageTests extends BaseTest {
 	
-	private HomepageTests() {
-		
-	}
+	private HomepageTests() {}
 	
 	@Test
 	public void test1() {
