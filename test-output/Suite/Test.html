@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 29 15:53:40 SAST 2022</td>
+<td>Started on:</td><td>Thu Oct 06 12:05:59 SAST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>301 seconds (301090 ms)</td>
+<tr><td>Total time:</td><td>49 seconds (49135 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,92 +68,64 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.bongz.tests.MultiplyTests.setUp()'><b>setUp</b><br>Test class: org.bongz.tests.MultiplyTests<br>Parameters: [Ljava.lang.Object;@4b672daa</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. New session request timed out
-Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
-System info: host: &apos;d1044a29732d&apos;, ip: &apos;172.18.0.2&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.102.1-microsoft-standard-WSL2&apos;, java.version: &apos;11.0.16&apos;
-Driver info: driver.version: unknown
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C11-4CLGFW0LVCZ&apos;, ip: &apos;192.168.43.72&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
-Driver info: driver.version: Driver
-remote stacktrace: [{fileName=LocalNewSessionQueue.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=addToQueue, className=org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue, lineNumber=179, classLoaderName=app}, {fileName=NewSessionQueue.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$new$0, className=org.openqa.selenium.grid.sessionqueue.NewSessionQueue, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$TemplatizedRoute, lineNumber=192, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=NewSessionQueue.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.grid.sessionqueue.NewSessionQueue, lineNumber=120, classLoaderName=app}, {fileName=SpanWrappedHttpHandler.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.tracing.SpanWrappedHttpHandler, lineNumber=86, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Router.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.grid.router.Router, lineNumber=91, classLoaderName=app}, {fileName=EnsureSpecCompliantResponseHeaders.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.grid.web.EnsureSpecCompliantResponseHeaders, lineNumber=34, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$NestedRoute, lineNumber=270, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=AddWebDriverSpecHeaders.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.remote.AddWebDriverSpecHeaders, lineNumber=35, classLoaderName=app}, {fileName=ErrorFilter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.remote.ErrorFilter, lineNumber=44, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=ErrorFilter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.remote.ErrorFilter, lineNumber=44, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=SeleniumHandler.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$channelRead0$0, className=org.openqa.selenium.netty.server.SeleniumHandler, lineNumber=44, classLoaderName=app}, {fileName=Executors.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=call, className=java.util.concurrent.Executors$RunnableAdapter, lineNumber=515, classLoaderName=null}, {fileName=FutureTask.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=run, className=java.util.concurrent.FutureTask, lineNumber=264, classLoaderName=null}, {fileName=ThreadPoolExecutor.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=runWorker, className=java.util.concurrent.ThreadPoolExecutor, lineNumber=1128, classLoaderName=null}, {fileName=ThreadPoolExecutor.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=run, className=java.util.concurrent.ThreadPoolExecutor$Worker, lineNumber=628, classLoaderName=null}, {fileName=Thread.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=run, className=java.lang.Thread, lineNumber=829, classLoaderName=null}]
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at org.bongz.factories.DriverFactory.getDriver(DriverFactory.java:44)
-	at org.bongz.driver.Driver.initDriver(Driver.java:69)
-	at org.bongz.tests.BaseTest.setUp(BaseTest.java:20)
+<td title='org.bongz.tests.MultiplyTests.completeHealthQuestionnareTest()'><b>completeHealthQuestionnareTest</b><br>Test class: org.bongz.tests.MultiplyTests<br>Test method: To check if the user is ablee to complete the health questionaire<br>Parameters: {password=QEtCVG9remFuMjAyMQ==, menutxt=Health, browser=chrome, testname=completeHealthQuestionnareTest, execute=yes, version=98.0, username=bomaseko1}</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//button[@name=&apos;action&apos;])[1] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at org.bongz.factories.ExplicitWaitFactory.PerformExplicitWait(ExplicitWaitFactory.java:36)
+	at org.bongz.pages.BasePage.click(BasePage.java:31)
+	at org.bongz.pages.QuestionnairePage.startQuestionnaire(QuestionnairePage.java:39)
+	at org.bongz.tests.MultiplyTests.completeHealthQuestionnareTest(MultiplyTests.java:42)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1249054762", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1249054762'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. New session request timed out
-Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
-System info: host: &apos;d1044a29732d&apos;, ip: &apos;172.18.0.2&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.102.1-microsoft-standard-WSL2&apos;, java.version: &apos;11.0.16&apos;
-Driver info: driver.version: unknown
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@name=&apos;action&apos;])[1]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;C11-4CLGFW0LVCZ&apos;, ip: &apos;192.168.43.72&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
-Driver info: driver.version: Driver
-remote stacktrace: [{fileName=LocalNewSessionQueue.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=addToQueue, className=org.openqa.selenium.grid.sessionqueue.local.LocalNewSessionQueue, lineNumber=179, classLoaderName=app}, {fileName=NewSessionQueue.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$new$0, className=org.openqa.selenium.grid.sessionqueue.NewSessionQueue, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$TemplatizedRoute, lineNumber=192, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=NewSessionQueue.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.grid.sessionqueue.NewSessionQueue, lineNumber=120, classLoaderName=app}, {fileName=SpanWrappedHttpHandler.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.tracing.SpanWrappedHttpHandler, lineNumber=86, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Router.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.grid.router.Router, lineNumber=91, classLoaderName=app}, {fileName=EnsureSpecCompliantResponseHeaders.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.grid.web.EnsureSpecCompliantResponseHeaders, lineNumber=34, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$NestedRoute, lineNumber=270, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=handle, className=org.openqa.selenium.remote.http.Route$CombinedRoute, lineNumber=336, classLoaderName=app}, {fileName=Route.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Route, lineNumber=68, classLoaderName=app}, {fileName=AddWebDriverSpecHeaders.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.remote.AddWebDriverSpecHeaders, lineNumber=35, classLoaderName=app}, {fileName=ErrorFilter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.remote.ErrorFilter, lineNumber=44, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=ErrorFilter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$apply$0, className=org.openqa.selenium.remote.ErrorFilter, lineNumber=44, classLoaderName=app}, {fileName=Filter.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=execute, className=org.openqa.selenium.remote.http.Filter$1, lineNumber=64, classLoaderName=app}, {fileName=SeleniumHandler.java, moduleVersion=null, moduleName=null, nativeMethod=false, methodName=lambda$channelRead0$0, className=org.openqa.selenium.netty.server.SeleniumHandler, lineNumber=44, classLoaderName=app}, {fileName=Executors.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=call, className=java.util.concurrent.Executors$RunnableAdapter, lineNumber=515, classLoaderName=null}, {fileName=FutureTask.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=run, className=java.util.concurrent.FutureTask, lineNumber=264, classLoaderName=null}, {fileName=ThreadPoolExecutor.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=runWorker, className=java.util.concurrent.ThreadPoolExecutor, lineNumber=1128, classLoaderName=null}, {fileName=ThreadPoolExecutor.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=run, className=java.util.concurrent.ThreadPoolExecutor$Worker, lineNumber=628, classLoaderName=null}, {fileName=Thread.java, moduleVersion=11.0.16, moduleName=java.base, nativeMethod=false, methodName=run, className=java.lang.Thread, lineNumber=829, classLoaderName=null}]
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\BONGAN~1.MAS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60317}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c1bef5d18c21f57e78b7a942505caf68
+*** Element info: {Using=xpath, value=(//button[@name=&apos;action&apos;])[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at org.bongz.factories.DriverFactory.getDriver(DriverFactory.java:44)
-	at org.bongz.driver.Driver.initDriver(Driver.java:69)
-	at org.bongz.tests.BaseTest.setUp(BaseTest.java:20)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
+... Removed 10 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1556384222", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1556384222'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//button[@name=&apos;action&apos;])[1] (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at org.bongz.factories.ExplicitWaitFactory.PerformExplicitWait(ExplicitWaitFactory.java:36)
+	at org.bongz.pages.BasePage.click(BasePage.java:31)
+	at org.bongz.pages.QuestionnairePage.startQuestionnaire(QuestionnairePage.java:39)
+	at org.bongz.tests.MultiplyTests.completeHealthQuestionnareTest(MultiplyTests.java:42)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
 	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
@@ -163,8 +135,36 @@ remote stacktrace: [{fileName=LocalNewSessionQueue.java, moduleVersion=null, mod
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[@name=&apos;action&apos;])[1]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;C11-4CLGFW0LVCZ&apos;, ip: &apos;192.168.43.72&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\BONGAN~1.MAS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:60317}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c1bef5d18c21f57e78b7a942505caf68
+*** Element info: {Using=xpath, value=(//button[@name=&apos;action&apos;])[1]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 17 more
 </pre></div></td>
-<td>300</td>
+<td>21</td>
 <td>org.bongz.tests.MultiplyTests@1d9b7cce</td></tr>
 </table><p>
 </body>

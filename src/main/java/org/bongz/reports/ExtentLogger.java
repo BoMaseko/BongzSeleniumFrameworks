@@ -140,7 +140,7 @@ public final class ExtentLogger {
 				&& isScreeshotNeeded) {
 			
 			 ExtentManager.getExtentTest().pass(MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
-	            ExtentManager.getExtentTest().pass(message);
+	         ExtentManager.getExtentTest().pass(message);
 		}
 		else {
 			pass(message);
@@ -153,7 +153,7 @@ public final class ExtentLogger {
 				&& isScreeshotNeeded) {
 			
 			 ExtentManager.getExtentTest().fail(MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
-	            ExtentManager.getExtentTest().fail(message);
+	         ExtentManager.getExtentTest().fail(message);
 		}
 		else {
 			fail(message);
@@ -166,7 +166,7 @@ public final class ExtentLogger {
 				&& isScreeshotNeeded) {
 			
 			 ExtentManager.getExtentTest().skip(MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenshotUtils.getBase64Image()).build());
-	            ExtentManager.getExtentTest().skip(message);
+	         ExtentManager.getExtentTest().skip(message);
 		}
 		else {
 			skip(message);
