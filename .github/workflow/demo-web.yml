@@ -1,0 +1,27 @@
+name: run web test in github actions
+
+on: workflow_dispatch
+jobs: 
+  run -web-test:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: pull the project into the runner
+        uses: actions/checkout@v3
+
+      - name: set up java
+        uses: actions/setup-java@v3
+        with:
+          ditribution: 'temurin' 
+          java-version: '11'
+
+      - name: Start Selenoid server
+        uses: n-ton4/selenoid-github-action@master
+        id: start-selenoid
+        continue-on-career: false
+        with:
+          version: 1.10.1
+          arg: -limit 10
+          browsers: chrome
+          last-version: 1
