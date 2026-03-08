@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
+import static org.testng.AssertJUnit.assertEquals;
 
 
 public class BasePage {
@@ -21,18 +22,40 @@ public class BasePage {
 	 * writes the pass even to the extent report.
 	 * @author Bongz
 	 * @param by By Locator of the webelement
-	 * @param waitstrategy Strategy to find webelement. Known  strategies {@link org.bongz.enums.WaitStrategy}
+	 * @param waitstrategy Strategy to find webelement. Known  strategies {@link WaitStrategy}
 	 * @param elementname Name of the element that needs to be logged in the report.
 	 */
 	
 	WebElement element;
-	
-	protected void click(By by, WaitStrategy wait, String elementname) {
+
+
+	protected void switchToFrame(By by) {
+		element = DriverManager.getDriver().findElement(by);
+		DriverManager.getDriver().switchTo().frame(element);
+		try {
+			ExtentLogger.pass("Switched to iframe with locator: " + by.toString(), true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Switch back to the main content from an iframe.
+	 */
+	protected void switchToDefaultContent() {
+		DriverManager.getDriver().switchTo().defaultContent();
+		try {
+			ExtentLogger.pass("Switched back to the default content", true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	protected void click(By by, WaitStrategy wait, String elementName) {
 		element = ExplicitWaitFactory.PerformExplicitWait(wait, by);
 		element.click();
 		try {
-			//Thread.yield();
-			ExtentLogger.pass(elementname +" is Clicked", true);
+			ExtentLogger.pass(elementName +" is Clicked", true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -45,7 +68,7 @@ public class BasePage {
 	 * @author Bongz
 	 * @param by By Locator of the webelement
 	 * @param value value to be send the text box
-	 * @param waitstrategy Strategy to find webelement. Known  strategies {@link org.bongz.enums.WaitStrategy}
+	 * @param waitstrategy Strategy to find webelement. Known  strategies {@link WaitStrategy}
 	 * @param elementname Name of the element that needs to be logged in the report.
 	 */
 	protected void sendKeys(By by, String keys, WaitStrategy wait, String elementname) {
@@ -58,6 +81,17 @@ public class BasePage {
 			e.printStackTrace();
 		}
 	}
+
+	protected void clear(By by, WaitStrategy wait, String elementname) {
+
+		element = ExplicitWaitFactory.PerformExplicitWait(wait, by);
+		element.clear();
+		try {
+			//ExtentLogger.pass(keys + " is entered successfully in " + elementname, true );
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 	/**
 	 * 
@@ -65,7 +99,7 @@ public class BasePage {
 	 * writes the pass even to the extent report.
 	 * @author Bongz
 	 * @param by By Locator of the webelement
-	 * @param value value to be send the text box
+	 * @param wait value to be send the text box
 	 * @param waitstrategy Strategy to find webelement. Known  strategies {@link com.bongz.enums.WaitStrategy}
 	 * @param elementname Name of the element that needs to be logged in the report.
 	 */
@@ -121,6 +155,10 @@ public class BasePage {
 		element = DriverManager.getDriver().findElement(by);
 		((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
 
+	}
+
+	protected WebElement waitForElement(By by, WaitStrategy waitStrategy) {
+		return ExplicitWaitFactory.PerformExplicitWait(waitStrategy, by);
 	}
 
 }
