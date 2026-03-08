@@ -50,15 +50,15 @@ public final class ExtentReport {
 			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentReportFilePath());
 			extent.attachReporter(spark);
 			spark.config().setTheme(Theme.STANDARD);
-			spark.config().setReportName("Bongz Automation Labz - Training");
-			spark.config().setDocumentTitle("Bongz Automation Learningz");
+			spark.config().setReportName("XFocus Report - Platform Chat");
+			spark.config().setDocumentTitle("xFocus Report - Platform Chat");
 
 
 			extent.setSystemInfo("Organization", "Bongz Automation Labz");
 			extent.setSystemInfo("Domain", "Engineering (IT - Software)" + "  " +
 					ICON_LAPTOP); extent.setSystemInfo("Skill", "Test Automation Engineer");
 					extent.setSystemInfo("Employee", "<a href=" + ICON_SOCIAL_GITHUB_PAGE_URL +
-							"> <b> Bongani Maseko </b> </a>" + " " + ICON_SOCIAL_LINKEDIN + " " +
+							"> <b> ConnectMe - xFocus Team </b> </a>" + " " + ICON_SOCIAL_LINKEDIN + " " +
 							ICON_SOCIAL_GITHUB);
 
 		}

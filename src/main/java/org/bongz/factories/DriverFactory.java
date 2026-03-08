@@ -7,6 +7,8 @@ import org.bongz.utils.PropertyUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.CapabilityType;
@@ -39,7 +41,9 @@ public final class DriverFactory {
 				DesiredCapabilities cap = new DesiredCapabilities();
 				cap.setBrowserName(BrowserType.CHROME);
 				cap.setVersion(version);
-				cap.setCapability( "se:recordVideo", "true");
+
+
+				//cap.setCapability( "se:recordVideo", "true");
 				System.out.println("Test started successfully with " + cap.getBrowserName());
 				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
 				System.out.println("Test executed successfully with " + cap.getBrowserName());
@@ -61,16 +65,20 @@ public final class DriverFactory {
 				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
 			
 			}
-			
 			else {
-				System.out.println("Test started via chrome locally" );
-				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless");
-				options.addArguments("--disable-dev-shm-usage");
-				options.addArguments("--no-sandbox");
-				options.addArguments("window-size=1920, 1080");
+				System.out.println("Test started via chrome locally!!" );
+				//ChromeOptions options = new ChromeOptions();
+				//options.addArguments("--headless");
+				//options.addArguments("--disable-dev-shm-usage");
+				//options.addArguments("--no-sandbox");
+				//options.addArguments("window-size=1920, 1080");
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
+
+//
+
+
+
 			}
 		}else if (browser.equalsIgnoreCase("firefox")) {
 			//System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckodriverpath());
@@ -80,7 +88,9 @@ public final class DriverFactory {
 				cap.setBrowserName(BrowserType.FIREFOX);
 				cap.setVersion(version);
 				cap.setCapability( "se:recordVideo", "false");
+				System.out.println("Test started successfully with " + cap.getBrowserName());
 				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
+				System.out.println("Test executed successfully with " + cap.getBrowserName());
 			}else
 			{
 				WebDriverManager.firefoxdriver().setup();
@@ -95,11 +105,14 @@ public final class DriverFactory {
 				cap.setBrowserName(BrowserType.EDGE);
 				cap.setVersion(version);
 				cap.setCapability( "se:recordVideo", "false");
+				System.out.println("Test started successfully with " + cap.getBrowserName());
 				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
+				System.out.println("Test executed successfully with " + cap.getBrowserName());
 			}else
 			{
+				System.out.println("Test started via edge locally!!" );
 				WebDriverManager.edgedriver().setup();
-				
+				driver = new EdgeDriver();
 				
 			}
 		}

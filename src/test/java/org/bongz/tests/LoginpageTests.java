@@ -18,4 +18,8 @@ public final class LoginpageTests extends BaseTest{
 
 	}
 
+	public static void main(String[] args){
+
+	}
+
 }

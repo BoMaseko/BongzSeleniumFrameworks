@@ -1,0 +1,31 @@
+{
+  "data": {
+    "customerKey": {
+      "companyCode": "15",
+      "uid": "240620",
+      "type": "UCN"
+    },
+    "conversationId": "STRUCTURED_CHAT.ucn.15.240620",
+    "userReference": "1202072",
+    "customerReference": "1202072",
+    "client": "messaging_sc",
+    "name": "PERFTEST",
+    "supportNumber": "12028755",
+    "appVersion": "50",
+    "channel": "PHONE_APP",
+    "trustedForChannel": true,
+    "segment": "CS0SEN",
+    "segmentType": "SUB_SEGMENT_CODE",
+    "routing": {
+      "skillId": "",
+      "intentId": "",
+      "consumer": "null"
+    },
+    "type": "MESSAGE",
+    "payload": {
+      "messageType": "TEXT",
+      "message": "chat to advisor please",
+      "source": "APP"
+    }
+  }
+}

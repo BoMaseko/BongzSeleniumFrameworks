@@ -19,13 +19,13 @@ public final class FrameworkConstants {
 	 */
 	private FrameworkConstants() {}
 
-	private static final int WAITSTRATEGY = 10;
+	private static final int WAITSTRATEGY = 30;
 	private static final String RESOURCESPATH = System.getProperty("user.dir") + "/src/test/resources";
 	private static final String CHROMEDRIVERPATH = RESOURCESPATH + "/executables/chromedriver96.exe";
 	private static final String GECKODRIVERPATH = RESOURCESPATH + "/executables/geckodriver.exe";
 	private static final String CONFIGFILEPATH = RESOURCESPATH + "/config/config.properties";
 	private static final String JSONFILEPATH = RESOURCESPATH + "/config/config.json";
-	private static final String EXCELPATH = RESOURCESPATH + "/excel/Book1.xlsx";
+	private static final String EXCELPATH = RESOURCESPATH + "/excel/Book2.xlsx";
 	private static final String EXTENTREPORTFOLDERPATH = System.getProperty("user.dir") + "/extent-test-output/";
 	private static final String RUNMANAGERSHEET = "RUNMANAGER";
 	private static final String ITERATIONDATASHEET = "DATA"; 
