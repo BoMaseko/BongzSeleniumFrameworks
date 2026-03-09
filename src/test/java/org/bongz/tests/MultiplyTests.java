@@ -33,7 +33,7 @@ public final class MultiplyTests extends BaseTest{
 		  Assertions.assertThat(title).isNotBlank();
 	}
 	
-	@FrameworkAnnotations(author= {"Miquel Pennells"}, category= {CategoryType.SANITY})
+	@FrameworkAnnotations(author= {"Bongani Maseko"}, category= {CategoryType.SANITY})
 	@Test() //Reading from excel --> AnnotationListener
 	public void advisorLoginToPlatformChatTest(Map<String, String> data) throws Exception {
 

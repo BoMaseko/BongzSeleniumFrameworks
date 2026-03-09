@@ -19,7 +19,7 @@ spec:
         stage('Run UI Tests') {
             steps {
                 container('maven') {
-                    sh 'mvn clean test -Dselenium.hub.url=http://localhost:57544/wd/hub'
+                    sh 'mvn clean test -Dselenium.hub.url=http://selenium-hub.selenium:4444/wd/hub'
                 }
             }
         }
