@@ -51,8 +51,8 @@ spec:
 
     post {
         always {
-            archiveArtifacts artifacts: '**/target/surefire-reports/*.xml', allowEmptyArchive: true
             archiveArtifacts artifacts: '**/extent-test-output/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/target/surefire-reports/*.xml', allowEmptyArchive: true
         }
     }
 }

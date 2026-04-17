@@ -77,7 +77,10 @@ public final class ExtentReport {
 			extent.flush();
 		}
 		ExtentManager.unload();
-		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
+		// Only open browser on desktop environments, skip in headless CI
+		if (!java.awt.GraphicsEnvironment.isHeadless()) {
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
+		}
 	}
 
 	/**
