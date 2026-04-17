@@ -11,25 +11,22 @@ public final class MultiplyLoginPage extends BasePage{
 	private final By buttonLogin = By.xpath("//*[text()='LOG IN']"); 
 	
 	public MultiplyLoginPage clickLogin()  {
-		//Thread.yield();
-		click(login, WaitStrategy.NONE, "flogin");
+		click(login, WaitStrategy.CLICKABLE, "Login link");
 		return this;
 	}
 	
 	public MultiplyLoginPage enterUserName(String username) {
-		//Thread.yield();
-		sendKeys(userNameTxt, username, WaitStrategy.NONE, "Username");
+		sendKeys(userNameTxt, username, WaitStrategy.VISIBLE, "Username");
 		return this;
 	}
 	
 	public MultiplyLoginPage enterPassword(String password) {
-		//Thread.yield();
-		sendKeys(passwordTxt, password, WaitStrategy.NONE, "password");
+		sendKeys(passwordTxt, password, WaitStrategy.VISIBLE, "Password");
 		return this;
 	}
 	
 	public MultiplyHomePage login() {
-		click(buttonLogin, WaitStrategy.NONE, "llogin button");
+		click(buttonLogin, WaitStrategy.CLICKABLE, "Login button");
 		return new MultiplyHomePage();
 	}
 	

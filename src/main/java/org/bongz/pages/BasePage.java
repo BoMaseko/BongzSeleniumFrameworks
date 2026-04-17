@@ -1,5 +1,7 @@
 package org.bongz.pages;
 
+import java.time.Duration;
+import java.time.Duration;
 import java.util.List;
 
 import org.bongz.driver.DriverManager;
@@ -8,9 +10,11 @@ import org.bongz.factories.ExplicitWaitFactory;
 import org.bongz.reports.ExtentLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.testng.AssertJUnit.assertEquals;
 
@@ -37,6 +41,36 @@ public class BasePage {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	protected WebElement getShadowElement(String script) {
+
+		WebDriver driver = DriverManager.getDriver();
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+
+		return wait.until(d -> {
+			Object result = ((JavascriptExecutor) driver).executeScript(script);
+
+			if (result instanceof WebElement) {
+				return (WebElement) result;
+			}
+
+			return null;
+		});
+	}
+
+	protected WebElement waitForShadowElement(String script, int timeoutSeconds) {
+
+		WebDriver driver = DriverManager.getDriver();
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+
+		return wait.until(d -> {
+			Object el = ((JavascriptExecutor) driver).executeScript(script);
+
+			return (el != null) ? (WebElement) el : null;
+		});
 	}
 
 	/**

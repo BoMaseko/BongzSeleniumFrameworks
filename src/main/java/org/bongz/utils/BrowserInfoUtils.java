@@ -20,7 +20,7 @@ public final class BrowserInfoUtils {
     public static String getOS_Browser_BrowserVersionInfo() {
     	Capabilities cap = ((RemoteWebDriver) DriverManager.getDriver()).getCapabilities();
         return OSInfoUtils.getOSInfo() + " & " + BrowserInfoUtils.getBrowserInfo() + " - "
-                + cap.getVersion();
+                + cap.getBrowserVersion();
 
     }
 

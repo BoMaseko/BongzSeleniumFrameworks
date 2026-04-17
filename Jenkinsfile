@@ -1,27 +1,42 @@
 pipeline {
-    agent {
-        kubernetes {
-            yaml """
-apiVersion: v1
-kind: Pod
-spec:
-  containers:
-  - name: maven
-    image: maven:3.9.9-eclipse-temurin-17
-    command:
-    - cat
-    tty: true
-"""
-        }
+    agent any
+
+    tools {
+        maven 'Maven'
+        jdk 'JDK21'
+    }
+
+    environment {
+        REPO = "https://github.com/BoMaseko/BongzSeleniumFrameworks.git"
     }
 
     stages {
-        stage('Run UI Tests') {
+
+        stage('Checkout Code') {
             steps {
-                container('maven') {
-                    sh 'mvn clean test -Dselenium.hub.url=http://selenium-hub.selenium:4444/wd/hub'
-                }
+                git branch: 'main',
+                        credentialsId: 'github-selenium',
+                        url: "${REPO}"
             }
+        }
+
+        stage('Build Project') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Run Tests on Grid') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+    }
+
+    post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
         }
     }
 }

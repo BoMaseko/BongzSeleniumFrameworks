@@ -1,5 +1,7 @@
 package org.bongz.factories;
 
+import java.time.Duration;
+
 import org.bongz.constants.FrameworkConstants;
 import org.bongz.driver.DriverManager;
 import org.bongz.enums.WaitStrategy;
@@ -31,18 +33,18 @@ public class ExplicitWaitFactory {
 	 */
 	public static WebElement PerformExplicitWait(WaitStrategy waitstrategy, By by) {
 		WebElement element = null;
-		if(waitstrategy == waitstrategy.CLICKABLE) {
-			element = new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getWaitstrategy())
+		if(waitstrategy == WaitStrategy.CLICKABLE) {
+			element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getWaitstrategy()))
 			.until(ExpectedConditions.elementToBeClickable(by));
 		}
-		else if(waitstrategy == waitstrategy.PRESENT){
-			element = new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getWaitstrategy())
+		else if(waitstrategy == WaitStrategy.PRESENT){
+			element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getWaitstrategy()))
 			.until(ExpectedConditions.presenceOfElementLocated(by));
 		}
-		else if(waitstrategy == waitstrategy.VISIBLE){
-			element = new WebDriverWait(DriverManager.getDriver(), FrameworkConstants.getWaitstrategy())
+		else if(waitstrategy == WaitStrategy.VISIBLE){
+			element = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(FrameworkConstants.getWaitstrategy()))
 			.until(ExpectedConditions.visibilityOfElementLocated(by));
-		}else if(waitstrategy == waitstrategy.NONE){
+		}else if(waitstrategy == WaitStrategy.NONE){
 			element = DriverManager.getDriver().findElement(by);
 		}
 		return element;	

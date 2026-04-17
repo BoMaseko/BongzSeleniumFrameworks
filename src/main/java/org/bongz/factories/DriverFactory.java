@@ -10,113 +10,66 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-/**
- * 
- *Mar 7, 2022
- * @author Bongani Maseko
- *@version 1.0
- *@since 1.0
- */
 public final class DriverFactory {
-	
+
 	private DriverFactory() {}
-	
-	public static WebDriver getDriver(String browser, String version) throws Exception  {
-		
+
+	public static WebDriver getDriver(String browser, String version) throws Exception {
+
 		WebDriver driver = null;
-		
-		
-		if(browser.equalsIgnoreCase("chrome")) {
-			//System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromedriverpath());
-			//WebDriverManager.chromedriver().setup(); //executables ?? why not needed when executing in remote
-			if(PropertyUtils.getPropertyValue(ConfigProperties.RUNMODE).equalsIgnoreCase("remote")) {
-				DesiredCapabilities cap = new DesiredCapabilities();
-				cap.setBrowserName(BrowserType.CHROME);
-				cap.setVersion(version);
-
-
-				//cap.setCapability( "se:recordVideo", "true");
-				System.out.println("Test started successfully with " + cap.getBrowserName());
-				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
-				System.out.println("Test executed successfully with " + cap.getBrowserName());
-			}else if(PropertyUtils.getPropertyValue(ConfigProperties.RUNMODE).equalsIgnoreCase("selenoid")) {
-				/*
-				
-				 * cap.setBrowserName(BrowserType.CHROME); 
-				 * cap.setVersion(version);
-				 */
-				
-				DesiredCapabilities cap = new DesiredCapabilities();
-				cap.setCapability("browserName", "chrome");
-				cap.setCapability("browserVersion", "98.0");
-				cap.setCapability("enableVNC", true);
-				cap.setCapability("enableVideo", false);
-				cap.setCapability("enableLog", true);
-				cap.setCapability("videoName", "bongz_v1.mp4");
-				cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
-			
-			}
-			else {
-				System.out.println("Test started via chrome locally!!" );
-				//ChromeOptions options = new ChromeOptions();
-				//options.addArguments("--headless");
-				//options.addArguments("--disable-dev-shm-usage");
-				//options.addArguments("--no-sandbox");
-				//options.addArguments("window-size=1920, 1080");
-				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
-
-//
-
-
-
-			}
-		}else if (browser.equalsIgnoreCase("firefox")) {
-			//System.setProperty("webdriver.gecko.driver", FrameworkConstants.getGeckodriverpath());
-			//WebDriverManager.firefoxdriver().setup();
-			if(PropertyUtils.getPropertyValue(ConfigProperties.RUNMODE).equalsIgnoreCase("remote")) {
-				DesiredCapabilities cap = new DesiredCapabilities();
-				cap.setBrowserName(BrowserType.FIREFOX);
-				cap.setVersion(version);
-				cap.setCapability( "se:recordVideo", "false");
-				System.out.println("Test started successfully with " + cap.getBrowserName());
-				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
-				System.out.println("Test executed successfully with " + cap.getBrowserName());
-			}else
-			{
-				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
-				
-			}
+		String runMode = PropertyUtils.getPropertyValue(ConfigProperties.RUNMODE);
+		String gridUrl = PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL);
+		// Ensure grid URL ends with /wd/hub for Selenium 4 compatibility
+		if (!gridUrl.endsWith("/wd/hub")) {
+			gridUrl = gridUrl.replaceAll("/$", "") + "/wd/hub";
 		}
-		else if (browser.equalsIgnoreCase("edge")) {
-			
-			if(PropertyUtils.getPropertyValue(ConfigProperties.RUNMODE).equalsIgnoreCase("remote")) {
-				DesiredCapabilities cap = new DesiredCapabilities();
-				cap.setBrowserName(BrowserType.EDGE);
-				cap.setVersion(version);
-				cap.setCapability( "se:recordVideo", "false");
-				System.out.println("Test started successfully with " + cap.getBrowserName());
-				driver = new RemoteWebDriver(new URL(PropertyUtils.getPropertyValue(ConfigProperties.SELENIUMGRIDURL)), cap);
-				System.out.println("Test executed successfully with " + cap.getBrowserName());
-			}else
-			{
-				System.out.println("Test started via edge locally!!" );
+
+		if (browser.equalsIgnoreCase("chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			if (runMode.equalsIgnoreCase("remote")) {
+				// Don't set browser version for remote - let the Grid assign available node
+				System.out.println("Connecting to Grid: " + gridUrl);
+				driver = new RemoteWebDriver(new URL(gridUrl), options);
+				System.out.println("Test executed successfully with chrome");
+			} else if (runMode.equalsIgnoreCase("selenoid")) {
+				options.setBrowserVersion("98.0");
+				options.setCapability("selenoid:options", java.util.Map.of(
+					"enableVNC", true, "enableVideo", false, "enableLog", true
+				));
+				options.setAcceptInsecureCerts(true);
+				driver = new RemoteWebDriver(new URL(gridUrl), options);
+			} else {
+				System.out.println("Test started via chrome locally!!");
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver(options);
+			}
+		} else if (browser.equalsIgnoreCase("firefox")) {
+			FirefoxOptions options = new FirefoxOptions();
+			if (runMode.equalsIgnoreCase("remote")) {
+				System.out.println("Connecting to Grid: " + gridUrl);
+				driver = new RemoteWebDriver(new URL(gridUrl), options);
+				System.out.println("Test executed successfully with firefox");
+			} else {
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver(options);
+			}
+		} else if (browser.equalsIgnoreCase("edge")) {
+			EdgeOptions options = new EdgeOptions();
+			if (runMode.equalsIgnoreCase("remote")) {
+				System.out.println("Connecting to Grid: " + gridUrl);
+				driver = new RemoteWebDriver(new URL(gridUrl), options);
+				System.out.println("Test executed successfully with edge");
+			} else {
+				System.out.println("Test started via edge locally!!");
 				WebDriverManager.edgedriver().setup();
-				driver = new EdgeDriver();
-				
+				driver = new EdgeDriver(options);
 			}
 		}
 		return driver;
 	}
-
 }

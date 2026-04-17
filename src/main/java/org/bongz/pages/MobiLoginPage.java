@@ -24,7 +24,7 @@ public class MobiLoginPage extends BasePage{
         return this;
     }
 
-    public SelectProfilePage loginToMobi() {
+    public SelectProfilePage loginToHomeAssistant() {
         click(buttonLogin, WaitStrategy.VISIBLE, "login button");
         System.out.println("Navigated to: " + DriverManager.getDriver().getCurrentUrl());
         return new SelectProfilePage();
