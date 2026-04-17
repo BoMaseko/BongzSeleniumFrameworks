@@ -1,5 +1,26 @@
 pipeline {
-    agent any
+    agent {
+        kubernetes {
+            yaml '''
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: maven
+    image: maven:3.9.6-eclipse-temurin-17
+    command: ["sleep"]
+    args: ["infinity"]
+    resources:
+      requests:
+        memory: "512Mi"
+        cpu: "500m"
+      limits:
+        memory: "1Gi"
+        cpu: "1"
+'''
+            defaultContainer 'maven'
+        }
+    }
 
     environment {
         REPO = "https://github.com/BoMaseko/BongzSeleniumFrameworks.git"
@@ -10,7 +31,6 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'master',
-                        credentialsId: 'github-selenium',
                         url: "${REPO}"
             }
         }
@@ -31,7 +51,8 @@ pipeline {
 
     post {
         always {
-            junit '**/target/surefire-reports/*.xml'
+            archiveArtifacts artifacts: '**/target/surefire-reports/*.xml', allowEmptyArchive: true
+            archiveArtifacts artifacts: '**/extent-test-output/**', allowEmptyArchive: true
         }
     }
 }
