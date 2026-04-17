@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven'
-        jdk 'JDK21'
-    }
-
     environment {
         REPO = "https://github.com/BoMaseko/BongzSeleniumFrameworks.git"
     }
@@ -14,7 +9,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git branch: 'main',
+                git branch: 'master',
                         credentialsId: 'github-selenium',
                         url: "${REPO}"
             }
