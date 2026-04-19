@@ -24,6 +24,7 @@ spec:
 
     environment {
         REPO = "https://github.com/BoMaseko/BongzSeleniumFrameworks.git"
+        GRID_URL = "https://selenium.maseko-lab.xyz/wd/hub"
     }
 
     stages {
@@ -43,7 +44,11 @@ spec:
 
         stage('Run Tests on Grid') {
             steps {
-                sh 'mvn test'
+                sh """
+                mvn test \
+                -Dselenium.grid.url=${GRID_URL} \
+                -Drun.mode=remote
+                """
             }
         }
 
